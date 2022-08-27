@@ -19,6 +19,7 @@ def run(type):
     suc = 0
     fail = 0
     totle = 0
+    totle_time = 0
     min_time = 0
     max_time = 0
 
@@ -37,6 +38,8 @@ def run(type):
             end = time.time()
 
             reduce = end - begin
+
+            totle_time = totle_time + reduce
 
             if min_time == 0:
                 min_time = reduce
@@ -68,8 +71,7 @@ def run(type):
             err = err + 1
 
     print("类型：", type, "接口总数：", totle, "成功：", suc, "失败：", fail, ",超时：", querys, "最小花费：", (min_time * 1000),
-          "最大花费：",
-          (max_time * 1000))
+          "最大花费：",(max_time * 1000),"总花费：",(totle_time),"qps：",totle/(totle_time))
 
 
 threads = []
