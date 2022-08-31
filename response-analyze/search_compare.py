@@ -65,7 +65,7 @@ def search(type=None):
         newdict["min_time"] = new_obj["min_time"]
         newdict["max_time"] = new_obj["max_time"]
     else:
-        old_obj = old_search.old_publicity_search(rows)
+        old_obj = old_search.old_notice_search(rows)
         olddict["totle"] = old_obj["totle"]
         olddict["suc"] = old_obj["suc"]
         olddict["fail"] = old_obj["fail"]

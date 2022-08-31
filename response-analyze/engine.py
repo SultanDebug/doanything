@@ -54,9 +54,9 @@ for row in rows:
             fail = fail +1
         req = json.loads(body.get('request'))
         query = req.get('query')
-        print("查询==>", query)
+        print("查询",totle,"==>", query)
     except:
-        print("新接口==>", row, "error")
+        print("异常",totle,"==>", row, "error")
         err = err + 1
 
 

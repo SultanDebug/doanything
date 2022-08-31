@@ -67,7 +67,7 @@ def run(type):
 
             # print("查询==>", query)
         except:
-            print("新接口==>", row, "error")
+            print("新接口",totle,"==>", row, "error")
             err = err + 1
 
     print("类型：", type, "接口总数：", totle, "成功：", suc, "失败：", fail, ",超时：", querys, "最小花费：", (min_time * 1000),

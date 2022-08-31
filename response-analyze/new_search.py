@@ -31,8 +31,8 @@ def new_search(rows):
             #     获批名单 publicitylibrary
             #     申报通知,产业通知，政策资讯 relatematerial
             body = {
-                "collectionName": "publicitylibrary",
-                "request": "{\"offset\":1,\"size\":3,\"query\":\"" + query + "\",\"conditions\":\"{}\"}"
+                "collectionName": "relatematerial",
+                "request": "{\"offset\":1,\"size\":10,\"query\":\"" + query + "\",\"conditions\":\"{\\\"material_type_id\\\":1}\"}"
             }
             # 发送请求
             begin = time.time()
@@ -70,9 +70,9 @@ def new_search(rows):
                 suc = suc + 1
             else:
                 fail = fail + 1
-            print("新接口==>", flag, "/", arr[0], "/", arr[1])
+            print("新接口==>",totle,"==>", flag, "/", arr[0], "/", arr[1])
         except:
-            print("新接口==>error==>", row)
+            print("新接口==>",totle,"==>error==>", row)
             err = err + 1
 
     obj = {}
