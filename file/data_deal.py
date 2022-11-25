@@ -12,10 +12,10 @@ while i < xlxs.values.shape[0]:
         j += 1
     i += 1
 
-txt = pd.read_table("C:\\Users\\zhenqiang.huang\\Desktop\\searchprocess\\pydata\\source.txt");
+txt = pd.read_table("C:\\Users\\zhenqiang.huang\\Desktop\\searchprocess\\pydata\\source.txt")
 print("panda table形式：", txt)
 
-js = pd.read_json("C:\\Users\\zhenqiang.huang\\Desktop\\searchprocess\\pydata\\json.txt");
+js = pd.read_json("C:\\Users\\zhenqiang.huang\\Desktop\\searchprocess\\pydata\\json.txt")
 print("panda json形式：", type(js.values))
 
 with open("C:\\Users\\zhenqiang.huang\\Desktop\\searchprocess\\pydata\\source.txt", 'r', encoding='UTF-8') as f:
