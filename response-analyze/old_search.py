@@ -5,7 +5,7 @@ import requests
 
 
 def old_search(rows):
-    old_policy_url = "http://wzalgo-gateway-v2-pre-lan.qizhidao.com/general-search/search"
+    old_policy_url = ""
 
     old_totle = 0
     old_suc = 0
@@ -94,7 +94,7 @@ def old_search(rows):
 
 
 def old_publicity_search(rows):
-    old_policy_url = "http://wzalgo-gateway-v2-test-lan.qizhidao.com/general-search/search"
+    old_policy_url = ""
 
     old_totle = 0
     old_suc = 0
@@ -182,7 +182,7 @@ def old_publicity_search(rows):
 
 
 def old_project_publicity_search(rows):
-    old_policy_url = "http://wzalgo-gateway-v2-pre-lan.qizhidao.com/general-search/search"
+    old_policy_url = ""
 
     old_totle = 0
     old_suc = 0
@@ -271,7 +271,7 @@ def old_project_publicity_search(rows):
 
 
 def old_notice_search(rows):
-    old_policy_url = "http://wzalgo-gateway-v2-pre-lan.qizhidao.com/general-search/search"
+    old_policy_url = ""
 
     old_totle = 0
     old_suc = 0
@@ -360,7 +360,7 @@ def old_notice_search(rows):
 
 
 def old_policy_general_search(rows):
-    old_policy_url = "http://wzalgo-gateway-v2-pre-lan.qizhidao.com/general-search/search_policy"
+    old_policy_url = "_policy"
 
     old_totle = 0
     old_suc = 0

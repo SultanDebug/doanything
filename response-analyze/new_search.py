@@ -20,9 +20,9 @@ def new_search(rows):
             query = arr[0].strip()
             proid = arr[1].strip()
 
-            # host="http://192.168.200.91:8080"  #部署的服务器地址
-            # login_url="/chun5/user/login"  #请求地址
-            url = "http://wzalgo-gateway-v2-test-lan.qizhidao.com/bird-search-engine/bird/search/engine"  # 拼接地址
+            # host=""  #部署的服务器地址
+            # login_url=""  #请求地址
+            url = ""  # 拼接地址
 
             # 参数
             # 政策搜索索引名称

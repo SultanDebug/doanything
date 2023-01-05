@@ -23,8 +23,8 @@ for row in rows:
         proid = arr[0].strip()
         query = arr[1].strip()
 
-        # host="http://192.168.200.91:8080"  #部署的服务器地址
-        # login_url="/chun5/user/login"  #请求地址
+        # host=""  #部署的服务器地址
+        # login_url=""  #请求地址
         url = "http://172.16.5.233:8888/shard/single/query?index=enterprise&query="+query
 
         # 发送请求
