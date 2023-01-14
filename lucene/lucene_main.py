@@ -25,7 +25,7 @@ for row in rows:
 
         # host=""  #部署的服务器地址
         # login_url=""  #请求地址
-        url = "http://172.16.5.233:8888/shard/single/query?index=enterprise&query="+query
+        url = ""+query
 
         # 发送请求
         begin = time.time()
@@ -68,6 +68,6 @@ for row in rows:
         print("新接口==>", totle, "==>error==>", row)
         err = err + 1
 
-print("老接口总数：", totle, ",正确：", suc, ",失败：", fail, ",异常：", err, ",总花费：", (totle_time * 1000), ",平均花费：",
+print("接口总数：", totle, ",正确：", suc, ",失败：", fail, ",异常：", err, ",总花费：", (totle_time * 1000), ",平均花费：",
       ((totle_time / totle) * 1000), ",最小花费：", (min_time * 1000), ",最大花费：",
       (max_time * 1000), )

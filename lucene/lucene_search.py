@@ -4,7 +4,7 @@ import time
 import requests
 
 
-def new_search(rows):
+def search(rows):
     totle = 0
     suc = 0
     fail = 0
@@ -17,26 +17,16 @@ def new_search(rows):
         try:
             arr = row.split("||")
 
-            query = arr[0].strip()
-            proid = arr[1].strip()
+            proid = arr[0].strip()
+            query = arr[1].strip()
 
             # host=""  #部署的服务器地址
             # login_url=""  #请求地址
-            url = ""  # 拼接地址
+            url = "" + query
 
-            # 参数
-            # 政策搜索索引名称
-            #     项目简介 projectinfo
-            #     公示文件 projectpublicity
-            #     获批名单 publicitylibrary
-            #     申报通知,产业通知，政策资讯 relatematerial
-            body = {
-                "collectionName": "policygeneral",
-                "request": "{\"offset\":1,\"size\":3,\"query\":\"" + query + "\",\"conditions\":\"{}\"}"
-            }
             # 发送请求
             begin = time.time()
-            r = requests.post(url=url, json=body)
+            r = requests.get(url=url)
             end = time.time()
 
             reduce = end - begin
@@ -52,8 +42,8 @@ def new_search(rows):
                 max_time = reduce
             totle_time = totle_time + reduce
 
-            res = json.loads(r.content.decode('utf-8'))
-            docs = res.get('docs')
+            res = json.loads(r.text)
+            docs = res.get('data').get('data')
             flag = False
             k = 0
             for doc in docs:
@@ -61,7 +51,7 @@ def new_search(rows):
                 #     break
                 k = k + 1
                 # 输出返回
-                proid_doc = doc['project_id']
+                proid_doc = doc['company_id']
                 if proid == proid_doc:
                     flag = True
                     break
