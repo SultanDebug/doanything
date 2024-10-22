@@ -7,8 +7,8 @@ import numpy as np
 # print(sig.parameters)
 
 # help(np.random.randn)
-help(plt.pie)
+help(repr)
 
-# import demo.pic.basic_2d as base
+# import demo.datapic.basic_2d as base
 #
 # help(base)

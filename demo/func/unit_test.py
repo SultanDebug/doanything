@@ -82,3 +82,11 @@ z = 10/3
 print(x)
 print(y)
 print(z)
+
+
+for i in range(20):
+    expr = [str(random.randint(1, 9)) for m in range(10)]
+    s = ''.join(expr)
+
+    print(s,end="/\n")
+
